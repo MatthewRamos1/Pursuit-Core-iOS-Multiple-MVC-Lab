@@ -20,18 +20,17 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="136" id="Ofe-hf-Z0P" customClass="AnimalCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="animalCell" rowHeight="136" id="Ofe-hf-Z0P" customClass="AnimalCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ofe-hf-Z0P" id="ALY-t4-I9b">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OTm-fx-MQL">
-                                                    <rect key="frame" x="0.0" y="13.5" width="120" height="109"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OTm-fx-MQL">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="136"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="Qdx-q7-3uE"/>
-                                                        <constraint firstAttribute="height" constant="109" id="oay-Bx-2Gm"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whT-Uy-8nT">
@@ -41,7 +40,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rba-bF-CT8">
-                                                    <rect key="frame" x="128" y="30" width="258" height="21"/>
+                                                    <rect key="frame" x="128" y="19" width="258" height="32"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -53,11 +52,15 @@
                                                 <constraint firstItem="whT-Uy-8nT" firstAttribute="trailing" secondItem="ALY-t4-I9b" secondAttribute="trailingMargin" constant="8" id="QSn-bK-S3d"/>
                                                 <constraint firstItem="whT-Uy-8nT" firstAttribute="centerY" secondItem="OTm-fx-MQL" secondAttribute="centerY" id="QvG-ML-dDh"/>
                                                 <constraint firstItem="Rba-bF-CT8" firstAttribute="leading" secondItem="OTm-fx-MQL" secondAttribute="trailing" constant="8" id="WCh-Ga-JC3"/>
+                                                <constraint firstItem="Rba-bF-CT8" firstAttribute="top" secondItem="ALY-t4-I9b" secondAttribute="topMargin" constant="8" id="bBD-gC-deh"/>
                                                 <constraint firstItem="whT-Uy-8nT" firstAttribute="top" secondItem="Rba-bF-CT8" secondAttribute="bottom" constant="8" id="h3u-1Y-CTw"/>
                                                 <constraint firstItem="whT-Uy-8nT" firstAttribute="leading" secondItem="OTm-fx-MQL" secondAttribute="trailing" constant="8" id="rM7-cR-b4v"/>
                                                 <constraint firstItem="OTm-fx-MQL" firstAttribute="centerY" secondItem="ALY-t4-I9b" secondAttribute="centerY" id="xQL-m1-cOj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="OTm-fx-MQL" firstAttribute="height" secondItem="Ofe-hf-Z0P" secondAttribute="height" id="qbP-YI-IJz"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="animalImage" destination="OTm-fx-MQL" id="pZx-ji-cBo"/>
                                             <outlet property="animalName" destination="Rba-bF-CT8" id="pDE-nS-zQ0"/>
@@ -77,6 +80,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Animals" id="yPz-iS-QSw"/>
+                    <connections>
+                        <outlet property="tableView" destination="lLK-ux-P52" id="E96-XZ-wbr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

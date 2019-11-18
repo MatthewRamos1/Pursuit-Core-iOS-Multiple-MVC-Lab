@@ -14,5 +14,11 @@ class AnimalCell: UITableViewCell {
     @IBOutlet weak var animalType: UILabel!
     @IBOutlet weak var animalImage: UIImageView!
     
-
+    func configureCell (for animal: ZooAnimal){
+        animalName.text = animal.name
+        animalType.text = animal.classification
+        animalImage.image = UIImage(named: String(animal.imageNumber))
+    }
 }
+
+
