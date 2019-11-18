@@ -10,6 +10,9 @@ import UIKit
 
 class AnimalCell: UITableViewCell {
 
-
+    @IBOutlet weak var animalName: UILabel!
+    @IBOutlet weak var animalType: UILabel!
+    @IBOutlet weak var animalImage: UIImageView!
+    
 
 }
