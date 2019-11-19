@@ -11,6 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    var animalClassifications = [[ZooAnimal]]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     
     
     
@@ -19,6 +25,13 @@ class ViewController: UIViewController {
         tableView.dataSource = self
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let animalViewController = segue.destination as? AnimalViewController, let indexPath = tableView.indexPathForSelectedRow else {
+            fatalError()
+        }
+        animalViewController.animal = ZooAnimal.zooAnimals[indexPath.row]
+        
+    }
 
 }
 

@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Animal View Controller-->
         <scene sceneID="OiV-WQ-3Ar">
             <objects>
-                <viewController id="gL9-A6-omx" sceneMemberID="viewController">
+                <viewController id="gL9-A6-omx" customClass="AnimalViewController" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5n3-w6-e6I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,6 +122,9 @@
                         <viewLayoutGuide key="safeArea" id="gpI-OF-2ON"/>
                     </view>
                     <navigationItem key="navigationItem" id="jm6-mE-koF"/>
+                    <connections>
+                        <outlet property="animalImage" destination="Qa5-K0-56P" id="gjj-DP-f1a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5K-rd-jO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -127,6 +127,24 @@ Zebras are equids – members of the horse family (Equidae) and are medium sized
 Zebras were the second species to diverge from the earliest proto-horses, after the asses, around 4 million years ago. The Grevy’s zebra is believed to have been the first zebra species to emerge.
 """)
     ]
+    
+    static func classificationSections() -> [[ZooAnimal]] {
+        let sortedZooAnimals = zooAnimals.sorted { $0.classification < $1.classification }
+        let uniqueClassifications = Set(sortedZooAnimals.map { $0.classification })
+        var sections = Array(repeating: [ZooAnimal](), count: uniqueClassifications.count)
+        var currentIndex = 0
+        var currentClassification = sortedZooAnimals.first?.classification ?? "Error"
+        for animal in sortedZooAnimals {
+            if animal.classification == currentClassification {
+                sections[currentIndex].append(animal)
+            } else {
+                currentIndex += 1
+                currentClassification = animal.classification
+                sections[currentIndex].append(animal)
+            }
+        }
+        return sections
+    }
 }
 
 
