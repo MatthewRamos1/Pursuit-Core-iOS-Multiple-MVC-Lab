@@ -13,11 +13,13 @@ class AnimalCell: UITableViewCell {
     @IBOutlet weak var animalName: UILabel!
     @IBOutlet weak var animalType: UILabel!
     @IBOutlet weak var animalImage: UIImageView!
+    @IBOutlet weak var habitatLabel: UILabel!
     
     func configureCell (for animal: ZooAnimal){
         animalName.text = animal.name
         animalType.text = animal.classification
         animalImage.image = UIImage(named: String(animal.imageNumber))
+        habitatLabel.text = animal.origin
     }
 }
 

@@ -45,17 +45,27 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habitat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jb6-Gd-7mM">
+                                                    <rect key="frame" x="128" y="104" width="258" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="OTm-fx-MQL" firstAttribute="leading" secondItem="ALY-t4-I9b" secondAttribute="leading" id="Aoz-TY-C1C"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jb6-Gd-7mM" secondAttribute="trailing" constant="8" id="BA8-ta-5SX"/>
+                                                <constraint firstItem="Jb6-Gd-7mM" firstAttribute="leading" secondItem="OTm-fx-MQL" secondAttribute="trailing" constant="8" id="BSG-Zd-5GU"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Rba-bF-CT8" secondAttribute="trailing" constant="8" id="FFA-nC-LjI"/>
                                                 <constraint firstItem="whT-Uy-8nT" firstAttribute="trailing" secondItem="ALY-t4-I9b" secondAttribute="trailingMargin" constant="8" id="QSn-bK-S3d"/>
                                                 <constraint firstItem="whT-Uy-8nT" firstAttribute="centerY" secondItem="OTm-fx-MQL" secondAttribute="centerY" id="QvG-ML-dDh"/>
                                                 <constraint firstItem="Rba-bF-CT8" firstAttribute="leading" secondItem="OTm-fx-MQL" secondAttribute="trailing" constant="8" id="WCh-Ga-JC3"/>
                                                 <constraint firstItem="Rba-bF-CT8" firstAttribute="top" secondItem="ALY-t4-I9b" secondAttribute="topMargin" constant="8" id="bBD-gC-deh"/>
+                                                <constraint firstItem="Jb6-Gd-7mM" firstAttribute="bottom" secondItem="ALY-t4-I9b" secondAttribute="bottomMargin" id="gjo-rf-EBb"/>
                                                 <constraint firstItem="whT-Uy-8nT" firstAttribute="top" secondItem="Rba-bF-CT8" secondAttribute="bottom" constant="8" id="h3u-1Y-CTw"/>
                                                 <constraint firstItem="whT-Uy-8nT" firstAttribute="leading" secondItem="OTm-fx-MQL" secondAttribute="trailing" constant="8" id="rM7-cR-b4v"/>
                                                 <constraint firstItem="OTm-fx-MQL" firstAttribute="centerY" secondItem="ALY-t4-I9b" secondAttribute="centerY" id="xQL-m1-cOj"/>
+                                                <constraint firstItem="Jb6-Gd-7mM" firstAttribute="top" secondItem="whT-Uy-8nT" secondAttribute="bottom" constant="27" id="zEL-jC-eAf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
@@ -65,6 +75,8 @@
                                             <outlet property="animalImage" destination="OTm-fx-MQL" id="pZx-ji-cBo"/>
                                             <outlet property="animalName" destination="Rba-bF-CT8" id="pDE-nS-zQ0"/>
                                             <outlet property="animalType" destination="whT-Uy-8nT" id="PCM-YZ-tMB"/>
+                                            <outlet property="habitatLabel" destination="Jb6-Gd-7mM" id="BfC-Hd-xGv"/>
+                                            <segue destination="gL9-A6-omx" kind="show" id="ie6-xw-S3z"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -95,13 +107,25 @@
                     <view key="view" contentMode="scaleToFill" id="5n3-w6-e6I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qa5-K0-56P">
+                                <rect key="frame" x="0.0" y="140" width="435" height="216.5"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qa5-K0-56P" firstAttribute="height" secondItem="gpI-OF-2ON" secondAttribute="height" multiplier="0.3" id="2KL-BB-iGM"/>
+                            <constraint firstAttribute="trailing" secondItem="Qa5-K0-56P" secondAttribute="trailing" constant="-21" id="K2o-mh-54c"/>
+                            <constraint firstItem="Qa5-K0-56P" firstAttribute="leading" secondItem="gpI-OF-2ON" secondAttribute="leading" id="Wka-eG-bMO"/>
+                            <constraint firstItem="Qa5-K0-56P" firstAttribute="top" secondItem="gpI-OF-2ON" secondAttribute="top" id="Zoz-fm-nhF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gpI-OF-2ON"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jm6-mE-koF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5K-rd-jO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="118"/>
+            <point key="canvasLocation" x="1792.753623188406" y="117.85714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dHW-P9-L0f">
