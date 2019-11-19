@@ -11,8 +11,8 @@ import UIKit
 class AnimalViewController: UIViewController {
     
     @IBOutlet weak var animalImage: UIImageView!
-    var animal: ZooAnimal?
-    
+    @IBOutlet weak var animalInfoLabel: UILabel!
+     var animal: ZooAnimal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,7 @@ class AnimalViewController: UIViewController {
             fatalError()
         }
         animalImage.image = UIImage(named: updateAnimal.imageNumber.description)
+        animalInfoLabel.text = updateAnimal.info
     }
     
 
